@@ -1,0 +1,3003 @@
+{
+	"info": {
+		"_postman_id": "50bff307-6877-46be-8823-cdb1af56a518",
+		"name": "Geo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15338257"
+	},
+	"item": [
+		{
+			"name": "/v1/properties/circle-search",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без параметра latitude",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?longitude=47.8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без параметра longitude",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без параметра radius",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без параметра since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без параметра count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&since=null",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latitude более 90",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=100&longitude=47.8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "100"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latitude менее 90",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=-100&longitude=47.8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "-100"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latitude с запятой",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56,637028&longitude=47.8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56,637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "longitude более 180",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=200&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "200"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "longitude менее 180",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=-200&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "-200"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "longitude с запятной",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47,8772&radius=10000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47,8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "radius менее 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=0&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "0"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "radius более 30000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function (){\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=40000&since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "40000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "не существующий since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&since=12345&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "12345"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count = 0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&since=null&count=0",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count более 500",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?latitude=56.637028&longitude=47.8772&radius=10000&since=null&count=501",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								},
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "501"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметры поменяны местами",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/properties/circle-search?longitude=47.8772&since=null&count=500&radius=10000&latitude=56.637028",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"properties",
+								"circle-search"
+							],
+							"query": [
+								{
+									"key": "longitude",
+									"value": "47.8772"
+								},
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								},
+								{
+									"key": "radius",
+									"value": "10000"
+								},
+								{
+									"key": "latitude",
+									"value": "56.637028"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/countries/RUS/properties",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/properties?since=null&count=3",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/properties?count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос без count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/properties?since=null",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующий since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/properties?since=12345&count=3",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "12345"
+								},
+								{
+									"key": "count",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "string = ENG",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/ENG/properties?since=null&count=3",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"ENG",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/regions/{regionId}/properties",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Без параметра since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Без параметра count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?since=null",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующий regionId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/1234567/properties?since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"1234567",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующий since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?since=12345&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "12345"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count менее 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?since=null&count=0",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count более 501",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/regions/44/properties?since=null&count=501",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"regions",
+								"44",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "501"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/cities/{cityId}/properties",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Без параметра since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Без параметра count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?since=null",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующий cityId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/12345/properties?since=null&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"12345",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующий since",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?since=12345&count=500",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "12345"
+								},
+								{
+									"key": "count",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count менее 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?since=null&count=0",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count более 501",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/cities/1/properties?since=null&count=501",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"cities",
+								"1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "null"
+								},
+								{
+									"key": "count",
+									"value": "501"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/countries",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/countries/RUS/regions",
+			"item": [
+				{
+					"name": "Валиднйы запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/regions",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "countryCode = ENG",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/ENG/regions",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"ENG",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/countries/RUS/cities",
+			"item": [
+				{
+					"name": "Валидный запрос",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/RUS/cities",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"RUS",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "countryCode = ENG",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function (){\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "47306034-78fc-4767-bfd9-25e78825b985",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://partner.qatl.ru/api/geo/v1/countries/ENG/cities",
+							"protocol": "https",
+							"host": [
+								"partner",
+								"qatl",
+								"ru"
+							],
+							"path": [
+								"api",
+								"geo",
+								"v1",
+								"countries",
+								"ENG",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
